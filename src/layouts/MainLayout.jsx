@@ -5,7 +5,7 @@ import Navbar from "../pages/shared/navbar/Navbar";
 
 const MainLayout = () => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 w-7xl mx-auto p-5">
+    <div className="bg-gray-100 dark:bg-gray-900 mx-auto p-5">
       <header>
         <Navbar />
       </header>
