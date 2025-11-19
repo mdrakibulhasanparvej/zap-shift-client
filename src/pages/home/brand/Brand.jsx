@@ -13,7 +13,7 @@ const Brand = () => {
         setLoading(false);
       });
   }, []);
-  console.log(banner);
+//   console.log(banner);
 
   if (loading) return <p>loading......</p>;
   return (

@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "quote": "A posture corrector works by providing support and gentle alignment to your shoulders, back, and spine, encouraging you to maintain proper posture throughout the day.",
+    "author": "Awlad Hossin",
+    "title": "Senior Product Designer",
+    "category": "Health & Wellness",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 2,
+    "quote": "The new ergonomic chair has significantly reduced my back pain during long work hours. Highly recommend for desk workers!",
+    "author": "Sarah Jenkins",
+    "title": "Software Engineer",
+    "category": "Workplace Solutions",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 3,
+    "quote": "Using this daily has changed my life. I stand taller and feel more confident. The improvement in my posture is remarkable.",
+    "author": "Michael Rodriguez",
+    "title": "Sales Manager",
+    "category": "Personal Health",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 4,
+    "quote": "Excellent product quality and very comfortable to wear under clothing. It's discreet yet effective.",
+    "author": "Emily Clark",
+    "title": "Graphic Artist",
+    "category": "Apparel & Accessories",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 5,
+    "quote": "As a physical therapist, I often recommend this device to my patients. It's a great tool for building muscle memory.",
+    "author": "Dr. Ben Carter",
+    "title": "Physical Therapist",
+    "category": "Professional Opinion",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 6,
+    "quote": "The adjustable straps make it perfect for any body type. My whole family uses one now!",
+    "author": "Liam O'Connell",
+    "title": "Small Business Owner",
+    "category": "Family Health",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 7,
+    "quote": "I was skeptical at first, but after a week, the difference in my shoulder alignment was clear.",
+    "author": "Chloe Kim",
+    "title": "Student",
+    "category": "Everyday Use",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 8,
+    "quote": "Durable materials and easy to clean. It feels like a premium product that will last a long time.",
+    "author": "David Lee",
+    "title": "Quality Assurance Specialist",
+    "category": "Product Review",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 9,
+    "quote": "Finally, a solution that doesn't restrict movement but still provides effective support throughout the day.",
+    "author": "Anna Petrova",
+    "title": "Yoga Instructor",
+    "category": "Fitness & Exercise",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  },
+  {
+    "id": 10,
+    "quote": "This posture corrector has helped me alleviate the chronic neck pain caused by working on a computer for 8+ hours a day.",
+    "author": "Jordan Taylor",
+    "title": "Data Analyst",
+    "category": "Pain Management",
+    "image_url": "https://img.icons8.com/?size=96&id=23242&format=png"
+  }
+]
