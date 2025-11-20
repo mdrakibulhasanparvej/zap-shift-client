@@ -60,10 +60,10 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end flex gap-2">
-        <Link to="/register" className="btn">
+        <Link to="/login" className="btn">
           Sign In
         </Link>
-        <Link to="/be_a_rider" className="btn">
+        <Link to="/register" className="btn">
           Be a rider
         </Link>
       </div>
