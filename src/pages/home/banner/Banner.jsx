@@ -38,7 +38,7 @@ const Banner = () => {
       >
         {data.map((items, index) => (
           <SwiperSlide key={index}>
-            <div className="flex justify-between items-center p-15 rounded-xl my-5 shadow-sm bg-white dark:bg-gray-800 ">
+            <div className="flex justify-between items-center p-15 rounded-xl my-5 shadow-sm bg-[linear-gradient(90deg,rgba(255,255,255,1)_0%,rgba(202,235,102,1)_85%,rgba(175,237,83,1)_100%)] dark:bg-gray-800 ">
               <div className="flex flex-col gap-5">
                 <div className="text-5xl space-y-5">
                   <img src={bannerImg2} className="w-40" alt="" />

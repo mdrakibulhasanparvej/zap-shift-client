@@ -7,6 +7,7 @@ import Register from "../pages/authentication/Register";
 import ForgetPassword from "../pages/authentication/ForgetPassword";
 import SendCode from "../pages/authentication/SendCode";
 import ResetPassword from "../pages/authentication/ResetPassword";
+import Coverage from "../pages/Coverage/Coverage";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         Component: Home,
+      },
+      {
+        path: "/coverage",
+        Component: Coverage,
       },
     ],
   },
