@@ -8,6 +8,11 @@ import ForgetPassword from "../pages/authentication/ForgetPassword";
 import SendCode from "../pages/authentication/SendCode";
 import ResetPassword from "../pages/authentication/ResetPassword";
 import Coverage from "../pages/Coverage/Coverage";
+import PrivateRoutes from "./PrivateRoutes";
+import Rider from "../pages/Rider/Rider";
+import SendParcel from "../pages/SendParcel/SendParcel";
+import DashBoardLayout from "../layouts/DashBoardLayout";
+import MyPercel from "../pages/Dashboard/MyPercel/MyPercel";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +20,25 @@ const router = createBrowserRouter([
     Component: MainLayout,
     children: [
       {
-        path: "/",
+        index: true,
         Component: Home,
+      },
+      {
+        path: "/rider",
+        element: (
+          <PrivateRoutes>
+            <Rider />
+          </PrivateRoutes>
+        ),
+      },
+      {
+        path: "/send-parcel",
+        element: (
+          <PrivateRoutes>
+            <SendParcel />
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("/serviceCenter.json").then((res) => res.json()),
       },
       {
         path: "/coverage",
@@ -47,6 +69,20 @@ const router = createBrowserRouter([
       {
         path: "/resetPassword",
         Component: ResetPassword,
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoutes>
+        <DashBoardLayout />
+      </PrivateRoutes>
+    ),
+    children: [
+      {
+        path: "my-percels",
+        Component: MyPercel,
       },
     ],
   },

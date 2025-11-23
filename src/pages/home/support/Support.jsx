@@ -18,8 +18,11 @@ const Support = () => {
 
   return (
     <div className="my-18 w-10/12 mx-auto flex flex-col gap-5">
-      {support.map((item) => (
-        <div className="flex gap-5 bg-white shadow-sm rounded-xl p-10 items-center">
+      {support.map((item, index) => (
+        <div
+          key={index}
+          className="flex gap-5 bg-white shadow-sm rounded-xl p-10 items-center"
+        >
           <div className="lg:border-r-2 lg:border-gray-500 lg:border-dashed pr-5">
             <img src={item.image_url} className="w-30" alt="" />
           </div>

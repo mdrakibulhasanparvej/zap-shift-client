@@ -26,8 +26,11 @@ const OurService = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-7 gap-4">
-        {card.map((item) => (
-          <div className="flex flex-col items-center text-center justify-center  bg-white p-5 space-y-5 rounded-xl">
+        {card.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-center justify-center  bg-white p-5 space-y-5 rounded-xl"
+          >
             <img src={item.icon_url} className="w-20 h-20" alt="" />
             <h2 className="text-xl text-[#03373D] font-bold">{item.title}</h2>
             <p className="text-md text-[#03555e] px-5">{item.description}</p>

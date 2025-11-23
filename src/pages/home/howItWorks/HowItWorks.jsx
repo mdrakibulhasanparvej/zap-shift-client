@@ -21,8 +21,11 @@ const HowItWorks = () => {
         <h2 className="text-2xl font-bold">How it Works</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-        {card.map((items) => (
-          <div className="rounded-xl my-5 p-5 shadow-sm bg-white dark:bg-gray-800 ">
+        {card.map((items, index) => (
+          <div
+            key={index}
+            className="rounded-xl my-5 p-5 shadow-sm bg-white dark:bg-gray-800 "
+          >
             <img src={items.icons_url} className="w-10" alt="" />
             <h2 className="font-bold py-2">{items.title}</h2>
             <p className="text-sm">{items.description}</p>

@@ -15,14 +15,14 @@ const Review = () => {
         setLoading(false);
       });
   }, [loading]);
-  console.log(reviews);
+  // console.log(reviews);
 
   if (loading) return <p>loading......</p>;
 
   return (
     <div className="w-10/12 mx-auto my-14 rounded-xl ">
       <div className="flex flex-col gap-5 text-center w-[70%] mx-auto mb-10">
-        <img src="" alt="" />
+        {/* <img src="" alt="" /> */}
         <h2 className="text-2xl text-center font-bold ">
           What our customers are sayings
         </h2>

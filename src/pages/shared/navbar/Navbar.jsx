@@ -2,8 +2,19 @@ import React from "react";
 import MyLink from "./MyLink";
 import Logo from "../../../component/logo/logo";
 import { Link } from "react-router";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const links = (
     <>
       <li>
@@ -18,9 +29,19 @@ const Navbar = () => {
       <li>
         <MyLink to="/pricing">Pricing</MyLink>
       </li>
-      <li>
-        <MyLink to="/be_a_rider">Be a Rider</MyLink>
-      </li>
+      {user && (
+        <>
+          <li>
+            <MyLink to="/send-parcel">Send Pacel</MyLink>
+          </li>
+          <li>
+            <MyLink to="/dashboard/my-percels">My Parcels</MyLink>
+          </li>
+          <li>
+            <MyLink to="/rider">Be a Rider</MyLink>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -52,19 +73,25 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className=" text-xl">
-          <Logo />
-        </Link>
+        <Logo />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end flex gap-2">
-        <Link to="/login" className="btn">
-          Sign In
-        </Link>
-        <Link to="/register" className="btn">
-          Be a rider
+        {user ? (
+          <button onClick={handleLogout} className="btn">
+            Log Out
+          </button>
+        ) : (
+          <div className="flex gap-5">
+            <Link to="/login" className="btn">
+              Log In
+            </Link>
+          </div>
+        )}
+        <Link to="/rider" className="btn">
+          Be a Rider
         </Link>
       </div>
     </div>
