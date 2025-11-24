@@ -1,13 +1,14 @@
 import React from "react";
 import { useForm, useWatch } from "react-hook-form";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 import Swal from "sweetalert2";
-import useAsioxSecure from "../../hooks/UseAsioxSecure";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
 
 const SendParcel = () => {
   const serviceCenters = useLoaderData();
-  const axiosSecure = useAsioxSecure();
+  const axiosSecure = useAxiosSecure();
+  const navigate = useNavigate();
   const { user } = useAuth();
   const {
     register,
@@ -28,7 +29,7 @@ const SendParcel = () => {
   };
 
   const handleSendParcel = (data) => {
-    console.log(data);
+    // console.log(data);
     const isDocument = data.parcelType === "document";
     const isSameDistrict = data.senderDistrict === data.receiverDistrict;
     const parcelWeight = parseFloat(data.parcelWeight);
@@ -48,7 +49,8 @@ const SendParcel = () => {
         cost = minCharge + extraCharge;
       }
     }
-    console.log(cost);
+    data.cost = cost;
+    // console.log(cost);
 
     Swal.fire({
       title: `Are you agree with the cost: ${cost} ?`,
@@ -57,12 +59,22 @@ const SendParcel = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, take it!",
+      confirmButtonText: "Confirm!",
     }).then((result) => {
       if (result.isConfirmed) {
         // save the parcel into to the database
         axiosSecure.post("/parcels", data).then((res) => {
           console.log(res.data);
+          if (res.data.insertedId) {
+            navigate("/dashboard/my-percels");
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Continue to Payment",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+          }
         });
 
         // Swal.fire({

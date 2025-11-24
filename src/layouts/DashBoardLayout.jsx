@@ -2,8 +2,12 @@ import React from "react";
 import { GoSidebarCollapse } from "react-icons/go";
 import { TiHomeOutline } from "react-icons/ti";
 import { IoSettingsOutline } from "react-icons/io5";
-import { Link, Outlet } from "react-router";
+import { TbTruckDelivery } from "react-icons/tb";
+import { MdPayment } from "react-icons/md";
+import { Outlet } from "react-router";
 import Logo from "../component/logo/logo";
+import MyLink from "../pages/shared/navbar/MyLink";
+import { FaHistory } from "react-icons/fa";
 
 const DashBoardLayout = () => {
   return (
@@ -43,24 +47,55 @@ const DashBoardLayout = () => {
         >
           <ul className="menu w-full grow">
             <li>
-              <Link
+              <MyLink
                 to="/"
                 className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
                 data-tip="Homepage"
               >
                 <TiHomeOutline className="my-1.5 inline-block size-4" />
                 <span className="is-drawer-close:hidden">Homepage</span>
-              </Link>
+              </MyLink>
+            </li>
+            <li>
+              <MyLink
+                to="/dashboard/my-percels"
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="MY-Parcels"
+              >
+                <TbTruckDelivery className="my-1.5 inline-block size-4" />
+                <span className="is-drawer-close:hidden">My Parcels</span>
+              </MyLink>
+            </li>
+            {/* <li>
+              <MyLink
+                to="/dashboard/payments"
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="MY-Parcels"
+              >
+                <MdPayment className="my-1.5 inline-block size-4" />
+                <span className="is-drawer-close:hidden">Payment</span>
+              </MyLink>
+            </li> */}
+            <li>
+              <MyLink
+                to="/dashboard/payments-history"
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="MY-Parcels"
+              >
+                <FaHistory className="my-1.5 inline-block size-4" />
+                <span className="is-drawer-close:hidden">Payment history</span>
+              </MyLink>
             </li>
 
             <li>
-              <button
+              <MyLink
+                to="/"
                 className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
                 data-tip="Settings"
               >
                 <IoSettingsOutline className="my-1.5 inline-block size-4" />
                 <span className="is-drawer-close:hidden">Settings</span>
-              </button>
+              </MyLink>
             </li>
           </ul>
         </div>
